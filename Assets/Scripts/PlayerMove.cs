@@ -8,7 +8,6 @@ public class PlayerMove : MonoBehaviour {
     private float speed;
 	
 
-	// Update is called once per frame
 	void Update () {
 
         if (Input.GetKey(KeyCode.RightArrow))
@@ -23,7 +22,7 @@ public class PlayerMove : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         Debug.Log("Hardcoded the lose function for right now");
         Destroy(gameObject);
