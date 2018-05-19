@@ -12,6 +12,8 @@ public class Pattern : MonoBehaviour {
         public bool[] cols = new bool[6];
     }
 
+    //float for the rate at the beat of the music will come
+    public float rate;
     public Row[] rows;
 
 }

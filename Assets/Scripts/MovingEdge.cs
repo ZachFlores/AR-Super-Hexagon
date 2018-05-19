@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class MovingEdge : MonoBehaviour {
 
-    [SerializeField]
     protected float mInitialSpeed;
 
     protected GameObject HexBase;
     protected Transform baseTransform;
+    protected GameManager manager;
 
 	protected virtual void Start () {
 
         HexBase = GameObject.FindWithTag("Base");
         baseTransform = HexBase.transform;
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
+        mInitialSpeed = (baseTransform.position - gameObject.transform.position).magnitude / (3 * (1 / (manager.beatsPerMinute / 60)));
 	}
 	
 	// Update is called once per frame

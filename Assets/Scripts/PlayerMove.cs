@@ -5,10 +5,18 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour {
 
     [SerializeField]
-    private float speed;
-	
+    private GameManager manager;
 
-	void Update () {
+    private float speed;
+
+    private void Start()
+    {
+        //takes two beats to go 360 degrees
+        speed = 1 / (manager.beatsPerMinute / 60);
+        speed = 2 * speed * 360;
+    }
+
+    void Update () {
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
