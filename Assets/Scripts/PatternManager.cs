@@ -32,14 +32,8 @@ public class PatternManager : MonoBehaviour {
     private float spawnTimer;
 
     private int rowIndex;
-    // Use this for initialization
     void Start() {
-        //shuffle algorithm here
-        //push all patterns into a stack;
-        for (int i = 0; i < patterns.Length; i++)
-        {
-            patternStack.Push(patterns[i]);
-        }
+        StartOver();
 	}
 	
 	// Update is called once per frame
@@ -95,5 +89,29 @@ public class PatternManager : MonoBehaviour {
             Instantiate(right, gameObject.transform);
         if (row.cols[5])
             Instantiate(topRight, gameObject.transform);
+    }
+
+    public void StartOver()
+    {
+        patternStack.Clear();
+        //shuffle array
+        for(int i = patterns.Length - 1; i>0; i--)
+        {
+            int j = Random.Range(0, i+1);
+            Pattern temp = patterns[j];
+            patterns[j] = patterns[i];
+            patterns[i] = temp;
+        }
+        //push all into a stack
+        for (int i = 0; i < patterns.Length; i++)
+        {
+            patternStack.Push(patterns[i]);
+        }
+    }
+
+
+    public void lose()
+    {
+
     }
 }

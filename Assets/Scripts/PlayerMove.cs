@@ -9,11 +9,12 @@ public class PlayerMove : MonoBehaviour {
 
     private float speed;
 
+    private Transform originalTransform;
+
     private void Start()
     {
-        //takes two beats to go 360 degrees
-        speed = 1 / (manager.beatsPerMinute / 60);
-        speed = 2 * speed * 360;
+        originalTransform = gameObject.transform;
+        StartOver();
     }
 
     void Update () {
@@ -32,7 +33,19 @@ public class PlayerMove : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hardcoded the lose function for right now");
-        Destroy(gameObject);
+        manager.lose();
+    }
+
+    public void StartOver()
+    {
+        gameObject.transform.rotation = originalTransform.rotation;
+        //take two "beats" to go 360 degrees
+        speed = 1 / (manager.beatsPerMinute / 60);
+        speed = 2 * speed * 360;
+    }
+
+    public void lose()
+    {
+        GetComponent<PlayerMove>().enabled = false;
     }
 }
