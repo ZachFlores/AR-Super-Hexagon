@@ -35,8 +35,8 @@ public class GameManager : MonoBehaviour {
 
     public void startPlaying()
     {
-        patternManager.enabled = true;
         patternManager.StartOver();
+        patternManager.enabled = true;
         player.enabled = true;
         player.StartOver();
     }

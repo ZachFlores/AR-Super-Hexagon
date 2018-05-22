@@ -33,7 +33,6 @@ public class PatternManager : MonoBehaviour {
 
     private int rowIndex;
     void Start() {
-        StartOver();
 	}
 	
 	// Update is called once per frame
@@ -93,7 +92,6 @@ public class PatternManager : MonoBehaviour {
 
     public void StartOver()
     {
-        patternStack.Clear();
         //shuffle array
         for(int i = patterns.Length - 1; i>0; i--)
         {
@@ -107,11 +105,20 @@ public class PatternManager : MonoBehaviour {
         {
             patternStack.Push(patterns[i]);
         }
+        rowIndex = 0;
     }
 
 
     public void lose()
     {
-
+        while(patternStack.Count != 0)
+        {
+            patternStack.Pop();
+        }
+        GetComponent<PatternManager>().enabled = false;
+        foreach(Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }
