@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1714950664351780}
+  m_IsPrefabParent: 1
+--- !u!1 &1714950664351780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4071799081892836}
+  - component: {fileID: 114785016170271088}
+  m_Layer: 0
+  m_Name: PatternManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4071799081892836
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714950664351780}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114785016170271088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714950664351780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e205b17bca22a7541ba20efcca6a20ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  topLeft: {fileID: 1108649219340358, guid: 8d95840186f450c4d9d50fad9306007f, type: 2}
+  left: {fileID: 1925121411893108, guid: b84481627c934bf4ba12236432047afa, type: 2}
+  bottomLeft: {fileID: 1018087210393480, guid: ec248375f95933e47b688c3102f9a2bd, type: 2}
+  bottomRight: {fileID: 1650035087863888, guid: 442e3862987c78446a79ac2229747985,
+    type: 2}
+  right: {fileID: 1631780344700004, guid: 63710c5ff9ac4e94faa9f3a76f5f2998, type: 2}
+  topRight: {fileID: 1671227370950490, guid: 764799bb08ae1e640a69d67b2be71456, type: 2}
+  patterns:
+  - {fileID: 114472086854771798, guid: 63fdd51cd79d24b4aa94f23f69962e6a, type: 2}
+  - {fileID: 114472086854771798, guid: d2383f50afe755143a28550b33975ae9, type: 2}
+  - {fileID: 114472086854771798, guid: 63fdd51cd79d24b4aa94f23f69962e6a, type: 2}
+  - {fileID: 114472086854771798, guid: 293df8ececd9737439df0469d3dbca2a, type: 2}
+  - {fileID: 114472086854771798, guid: d2383f50afe755143a28550b33975ae9, type: 2}

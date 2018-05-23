@@ -41,6 +41,7 @@ public class PatternManager : MonoBehaviour {
         if (!patternSpawning && patternStack.Count != 0)
         {
             currentPattern = patternStack.Peek();
+            Debug.Log(currentPattern.gameObject.name);
             rowIndex = 0;
             patternSpawning = true;
             spawnRate = 1 / ((gameManager.beatsPerMinute / currentPattern.rate)/60);
@@ -92,8 +93,9 @@ public class PatternManager : MonoBehaviour {
 
     public void StartOver()
     {
+        patternSpawning = false;
         //shuffle array
-        for(int i = patterns.Length - 1; i>0; i--)
+        for (int i = patterns.Length - 1; i>0; i--)
         {
             int j = Random.Range(0, i+1);
             Pattern temp = patterns[j];

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4155020572936430}
   - component: {fileID: 114472086854771798}
   m_Layer: 0
-  m_Name: Pattern 1
+  m_Name: Right Spiral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,11 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403bfb5abc455b94a97ec62b591a8254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 1
+  rate: 0.33
   rows:
   - cols: 010101010100
+  - cols: 010101010001
+  - cols: 010101000101
+  - cols: 010100010101
   - cols: 010001010101
-  - cols: 010101000101
   - cols: 000101010101
-  - cols: 010101000101
-  - cols: 010101010100
